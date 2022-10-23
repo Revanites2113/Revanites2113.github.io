@@ -5,14 +5,14 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const imgArray = ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg", "images/pic4.jpg"];
+const imgArray = ["images/pic1.jpeg", "images/ampPhoto.jpg", "images/REMap.jpg", "images/night.gif", "images/atNight.gif"];
 
 /* Declaring the alternative text for each image file */
-const altArray = ["blue eye", "wave thingy", "purple flowers", "Egyptian hieroglyphics", "schmitterling"];
+const altArray = ["my boi estinien", "my amp", "best level design", "Nighty night night night NIGHT", "at night!"];
 
 /* Looping through images */
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', imgArray[i]);
     newImage.setAttribute('alt', altArray[i]);
