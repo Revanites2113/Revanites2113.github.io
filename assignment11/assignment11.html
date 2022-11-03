@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script defer src="main.js"></script>
+    <title>Gamer APIs</title>
+</head>
+<body onload="getQuote(); getActivity()">
+    <div class="app">
+        <header>Gamer APIs</header>
+        <hr>
+        <h3>Wisdom of Trump</h3>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+          <img src="images/giphy.gif" alt="absolute unit" width="500" height="500">
+        </section>
+        <section class="controls">
+          <button type="button" id="js-new-quote" class="new-quote button">
+            Generate a new Donald Trump quote
+          </button>
+        </section>
+        <hr>
+        <h3>Are you bored?</h3>
+        <section class="bored">
+            <div class="bored-text" id="js-bored-text"></div>
+        </section>
+        <section class="controlsNew">
+            <button type="button" id="bored-new-activity" class="new-activity-button">
+                Generate new Activity
+            </button>
+        </section>
+        <hr>
+      </div>
+      <p>
+        I added a new button very similar to the first quote button except it grabs a random activity and displays it.
+        I also added a new image to accompany the lovely quote generator.
+      </p>
+</body>
+</html>
