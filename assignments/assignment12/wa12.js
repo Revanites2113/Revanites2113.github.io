@@ -1,61 +1,32 @@
-const minusButton = document.querySelector('.minusButton').addEventListener('click', minus);
-const plusButton = document.querySelector('.plusButton').addEventListener('click', plus);
-const resetButton = document.querySelector('.resetButton').addEventListener('click', reset);
-const submitButton = document.querySelector('.submitButton').addEventListener('click', submit);
-const randomButton = document.querySelector('.randomButton').addEventListener('click', random);
+/*get mouse position in box
+uses x client cord for first 3 num and y client cord for second set
+Third set uses x cord of screen*/
 
-const output = document.querySelector('.output');
-var outputInt = parseInt(output.textContent);
+let screenLog = document.querySelector('#screen-log');
+let selectionNum = document.querySelector('#number-entered');
+const submitButton = document.querySelector('.submit-button').addEventListener('click', submit);
+document.addEventListener('mousemove', logKey);
+document.addEventListener('click', selectNumber);
 
 function submit() {
-    alert(output.textContent);
+    alert(selectionNum.textContent);
 };
 
-function reset() {
-    const resetValue = "0000000000";
-    outputInt = 0;
-    output.textContent = resetValue;
+function logKey(e) {
+  screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
 };
 
-function plus() {
-    if (outputInt <= 9999999999) {
-        outputInt += 1;
-        output.textContent = outputInt;
+function selectNumber(e) {
+    var numSet1 = (e.clientX % 1000);
+    if(numSet1 < 100){
+        numSet1 += 100;
     }
-    else {
-        return;
+    var numSet2 = e.clientY;
+    if (numSet2 < 100) {
+        numSet2 += 100;
     }
+    var numSet3 = e.screenX + Math.trunc((Math.random() * 7999));
+    selectionNum.innerText = '(' + numSet1.toString() + ') - ' + numSet2.toString() + ' - ' + numSet3.toString();
 };
-
-function minus() {
-    if (outputInt <= 0) {
-        return;
-    }
-    else {
-        outputInt -= 1;
-        output.textContent = outputInt;
-    }
-};
-
-function random() {
-    outputInt = randomNumber(0, 9999999999);
-    output.textContent = outputInt;
-};
-
-function randomNumber(min, max) {
-    const num = Math.floor(Math.random(min, max - min + 1) + min);
-    return num;
-};
-
-
-/*const button = document.querySelector('.button');
-const output = document.querySelector('.output');
-let phone_content = document.querySelector('.phone');
-
-button.addEventListener('click', updateOutput);
-
-function updateOutput() {
-    output.textContent = phone_content.value;
-    alert("You submitted this number: " + phone_content.value);
-}*/
-
