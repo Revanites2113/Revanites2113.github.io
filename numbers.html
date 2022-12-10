@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title> Hello, I'm cool I promise</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+    </head>
+    <body>
+    <div class="col1">
+        <nav class="navbar"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="magi.html">Magi</a></li>
+                <li><a href="numbers.html">Numbers</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col2">
+        <h1>Welcome to the 8 Out of 10 Cats Countdown Game!</h1>
+        <p class="ruleEx">You will be given a number you want to reach using a set of another six numbers.</p>
+        <p class="ruleEx">You can use each number once in the six given numbers!</p>
+        <p class="ruleEx">Your number will always start at 1 and you can select one number and operation to build up</p>
+        <p class="ruleEx">*British wit and quips not included in this version</p>
+        <section class="controls">
+            <button type="button" id="newGoalNumber" class="new-numbers-button">
+                New Numbers 
+            </button>
+            <button type="button" id="multiplySelected" class="multiply-selected">
+                *
+            </button>
+            <button type="button" id="divideSelected" class="divide-selected">
+                /
+            </button>
+            <button type="button" id="addSelected" class="add-selected">
+                +
+            </button>
+            <button type="button" id="subtractSelected" class="subtract-selected">
+                -
+            </button>
+            <button type="button" id="submitNum" class="js-submit-num">
+                Submit
+            </button>
+        </section>
+    </div>
+    <div class="col3">
+        <button type="button" id="js-ranNum1" class="js-ranNum1-button">
+            Number 1
+        </button>
+        <button type="button" id="js-ranNum2" class="js-ranNum2-button">
+            Number 2
+        </button>
+        <button type="button" id="js-ranNum3" class="js-ranNum3-button">
+            Number 3
+        </button>
+        <button type="button" id="js-ranNum4" class="js-ranNum4-button">
+            Number 4
+        </button>
+        <button type="button" id="js-ranNum5" class="js-ranNum5-button">
+            Number 5
+        </button>
+        <button type="button" id="js-ranNum6" class="js-ranNum6-button">
+            Number 6
+        </button>
+        <div class="goalNum-text" id="js-goalNum-text">Goal Number: </div>
+        <div class="playerNum-text" id="js-playerNum-text">Player Number: </div>
+    </div>
+    <script src="js/numbers.js"></script>
+    </body>
+</html>

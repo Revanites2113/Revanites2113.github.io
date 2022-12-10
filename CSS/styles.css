@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+    padding-left: 5%;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
@@ -19,6 +20,7 @@ h1 {
 }
 
 h2 {
+    padding-left: 5%;
     font-family: 'Inria Serif';
     font-style: normal;
     font-weight: 400;
@@ -64,8 +66,8 @@ a:link {
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 18px;
     color: #0085FF;
 }
 
@@ -73,8 +75,8 @@ a:hover {
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 18px;
     color: #0AC1A0;
 }
 
@@ -82,23 +84,47 @@ a:visited {
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 18px;
     color: white;
 }
 
 button {
     box-sizing: border-box;
-    width: 149px;
-    height: 45px;
+    width: 175px;
+    height: 75px;
     background: #034a68;
+    font-size: 20px;
     border: 5px solid black;
-    
+    margin-left: 2%;   
+    margin-top: 2%;
 }
 
 .profile {
     border-radius: 50%;
     padding: 10%;
+}
+
+.navbar {
+    background-color: #0AC1A0;
+    display: flex;
+    flex-direction: row;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 5% 22.5%;
+    box-sizing: border-box;
+    background: #034a68;
+    border: 5px solid black;
 }
 
 @media screen and (min-width: 800px) {
@@ -124,28 +150,37 @@ button {
     li {
         font-style: oblique;
     }
-}
 
-.navbar {
-    background-color: #0AC1A0;
-    display: flex;
-    flex-direction: row;
-    position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-}
+    video {
+        width: 450px;
+        height: 253px;
+    }
 
-.navbar ul {
-    display: flex;
-    flex-direction: row;
-}
+    .gameVid {
+        width: 450px;
+        height: 253px;
+    }
 
-.navbar li{
-    display: inline-block;
-    padding: 0% 15%;
-    box-sizing: border-box;
-    background: #034a68;
-    border: 5px solid black;
+    iframe {
+        width: 400px;
+    }
+
+    a:link {
+        font-size: 12px;
+    }
+
+    .navbar li{
+        padding: 5% 5%;
+    }
+    
+    .gameShot {
+        width: 450px;
+    }
+
+    .moodboard {
+        width: 450px;
+    }
+
 }
 
 .col1 {
@@ -173,8 +208,36 @@ button {
 
 .gameVid {
     margin-left: 5%;
+    margin-bottom: 2%;
 }
 
 video {
     margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+iframe {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.documentation {
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.mechanicDemo {
+    margin-left: 0%;
+}
+
+.ruleEx {
+    margin-left: 7.5%;
+}
+
+.goalNum-text {
+    font-size: 30px;
+}
+
+.playerNum-text {
+    font-size: 30px;
 }
